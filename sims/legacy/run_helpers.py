@@ -1,10 +1,5 @@
-"""
-================================================================================
-Helper functions for running MOOSE simulations and logging outputs.
-================================================================================
-"""
-import subprocess
 import sys
+import subprocess
 from pathlib import Path
 from pyvale.mooseherder import MooseRunner
 
@@ -17,8 +12,11 @@ def get_file_base(moose_file: Path) -> str:
             sim_name = line.split("=")[1].split("#")[0].strip()
             break
     if not sim_name:
-        sim_name = moose_file.name.replace(".i", "")
-    end_time = "32"
+        sim_name = (
+            moose_file.name.replace("plate", "")
+            .replace(".i", "")
+        )
+    end_time = "24"
     common_load_path = moose_file.parent / "common_load_time.i"
     if common_load_path.exists():
         for line in common_load_path.read_text().splitlines():

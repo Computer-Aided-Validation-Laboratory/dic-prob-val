@@ -22,6 +22,7 @@
 out/
 notes/
 plans/
+refs/
 .venv/
 .ruff_cache/
 .antigravitycli/

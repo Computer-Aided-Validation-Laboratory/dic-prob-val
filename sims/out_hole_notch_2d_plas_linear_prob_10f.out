@@ -1,0 +1,142 @@
+Framework Information:
+MOOSE Version:           git commit b85414d92b on 2025-11-25
+LibMesh Version:         910736a3a20aded528c3ba99371ce65980dc8e2c
+PETSc Version:           3.24.0
+SLEPc Version:           3.24.0
+Current Time:            Wed Sep  2 20:10:27 2026
+Executable Timestamp:    Wed Nov 26 18:13:58 2025
+
+Input File(s):
+  /home/lloydf/dic-prob-val/sims/hole_notch_2d_plas_linear_prob.i
+
+Command Line Argument(s):
+  --n-threads=1
+
+Checkpoint:
+  Wall Time Interval:      Every 3600 s
+  User Checkpoint:         Disabled
+  # Checkpoints Kept:      2
+  Execute On:              TIMESTEP_END 
+
+Parallelism:
+  Num Processors:          1
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   6324
+  Elems:                   3056
+  Num Subdomains:          1
+
+Nonlinear System:
+  Num DOFs:                14282
+  Num Local DOFs:          14282
+  Variables:               { "disp_x" "disp_y" } "scalar_strain_zz" 
+  Finite Element Types:    "LAGRANGE" "LAGRANGE" 
+  Approximation Orders:    "SECOND" "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                42784
+  Num Local DOFs:          42784
+  Variables:               { "vonmises_stress" "strain_xx" "strain_yy" "strain_zz" "strain_xy" ... "stress_xx" 
+                             "stress_yy" "stress_zz" "stress_xy" "effective_plastic_strain_out" } 
+  Finite Element Types:    "MONOMIAL" 
+  Approximation Orders:    "CONSTANT" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             IterationAdaptiveDT
+  TimeIntegrator(s):       ImplicitEuler
+  Solver Mode:             NEWTON 
+  PETSc Preconditioner:    lu 
+  MOOSE Preconditioner:    SMP 
+
+Time Step 0, time = 0
+
+Postprocessor Values:
++----------------+----------------+-----------------------+
+| time           | disp_y_max     | plastic_strain_eq_max |
++----------------+----------------+-----------------------+
+|   0.000000e+00 |   0.000000e+00 |          0.000000e+00 |
++----------------+----------------+-----------------------+
++----------------+----------------+----------------+
+| time           | react_y_top    | stress_vm_max  |
++----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
++----------------+----------------+----------------+
+
+
+Time Step 1, time = 1, dt = 1
+ Skipping predictor this step
+ 0 Nonlinear |R| = [32m6.612842e+03[39m
+      0 Linear |R| = [32m6.612842e+03[39m
+      1 Linear |R| = [32m4.250863e-11[39m
+ 1 Nonlinear |R| = [32m2.863701e+03[39m
+      0 Linear |R| = [32m2.863701e+03[39m
+      1 Linear |R| = [32m2.024238e-10[39m
+
+Cannot take square root of a number less than or equal to zero in the calculation of C1 for the Rashid approximation for the rotation tensor. This zero or negative number may occur when elements become heavily distorted.
+To recover, the solution will fail and then be re-attempted with a reduced time step.
+
+  Nonlinear solve did not converge due to DIVERGED_FNORM_NAN iterations 1
+[31m Solve Did NOT Converge![39m
+Aborting as solve did not converge
+
+Solve failed, cutting timestep.
+
+Time Step 1, time = 0.5, dt = 0.5
+ Skipping predictor this step
+ 0 Nonlinear |R| = [32m3.203789e+03[39m
+      0 Linear |R| = [32m3.203789e+03[39m
+      1 Linear |R| = [32m7.138861e-12[39m
+ 1 Nonlinear |R| = [32m1.880454e+02[39m
+      0 Linear |R| = [32m1.880454e+02[39m
+      1 Linear |R| = [32m2.216032e-11[39m
+ 2 Nonlinear |R| = [32m1.705972e+02[39m
+      0 Linear |R| = [32m1.705972e+02[39m
+      1 Linear |R| = [32m1.725368e-11[39m
+ 3 Nonlinear |R| = [33m1.686410e+02[39m
+      0 Linear |R| = [32m1.686410e+02[39m
+      1 Linear |R| = [32m1.901082e-11[39m
+ 4 Nonlinear |R| = [33m1.669301e+02[39m
+      0 Linear |R| = [32m1.669301e+02[39m
+      1 Linear |R| = [32m1.704723e-11[39m
+ 5 Nonlinear |R| = [33m1.656367e+02[39m
+      0 Linear |R| = [32m1.656367e+02[39m
+      1 Linear |R| = [32m1.506431e-11[39m
+ 6 Nonlinear |R| = [33m1.640694e+02[39m
+      0 Linear |R| = [32m1.640694e+02[39m
+      1 Linear |R| = [32m1.460996e-11[39m
+ 7 Nonlinear |R| = [33m1.626683e+02[39m
+      0 Linear |R| = [32m1.626683e+02[39m
+      1 Linear |R| = [32m1.241016e-11[39m
+ 8 Nonlinear |R| = [33m1.616421e+02[39m
+      0 Linear |R| = [32m1.616421e+02[39m
+      1 Linear |R| = [32m1.171470e-11[39m
+ 9 Nonlinear |R| = [33m1.602260e+02[39m
+      0 Linear |R| = [32m1.602260e+02[39m
+      1 Linear |R| = [32m1.202998e-11[39m
+10 Nonlinear |R| = [33m1.586617e+02[39m
+      0 Linear |R| = [32m1.586617e+02[39m
+      1 Linear |R| = [32m1.064699e-11[39m
+11 Nonlinear |R| = [33m1.573013e+02[39m
+      0 Linear |R| = [32m1.573013e+02[39m
+      1 Linear |R| = [32m1.051795e-11[39m
+12 Nonlinear |R| = [33m1.560032e+02[39m
+      0 Linear |R| = [32m1.560032e+02[39m
+      1 Linear |R| = [32m9.920309e-12[39m
+13 Nonlinear |R| = [33m1.551483e+02[39m
+      0 Linear |R| = [32m1.551483e+02[39m
+      1 Linear |R| = [32m8.549676e-12[39m
+14 Nonlinear |R| = [33m1.538926e+02[39m
+      0 Linear |R| = [32m1.538926e+02[39m
+      1 Linear |R| = [32m8.005539e-12[39m
+15 Nonlinear |R| = [33m1.527275e+02[39m
+      0 Linear |R| = [32m1.527275e+02[39m
+      1 Linear |R| = [32m6.725648e-12[39m
+16 Nonlinear |R| = [33m1.512806e+02[39m
+      0 Linear |R| = [32m1.512806e+02[39m
+      1 Linear |R| = [32m5.657600e-12[39m
+17 Nonlinear |R| = [33m1.492452e+02[39m

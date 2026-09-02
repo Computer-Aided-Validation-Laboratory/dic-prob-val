@@ -8,10 +8,13 @@
 [Executioner]
     type = Transient
 
+    # Best solver options for low element count large deformation plasticity
     solve_type = 'NEWTON'
     petsc_options = '-snes_converged_reason'
-    petsc_options_iname = '-pc_type -ksp_type -ksp_gmres_restart -pc_factor_mat_ordering_type'
-    petsc_options_value = ' lu       gmres     30                         nd'
+    petsc_options_iname = '-pc_type -ksp_type -ksp_gmres_restart'
+    petsc_options_value = ' lu       gmres     200'
+
+    #line_search = basic
 
     l_max_its = 100
     l_tol = 1e-6

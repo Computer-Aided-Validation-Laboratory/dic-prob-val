@@ -1,0 +1,54 @@
+Framework Information:
+MOOSE Version:           git commit b85414d92b on 2025-11-25
+LibMesh Version:         910736a3a20aded528c3ba99371ce65980dc8e2c
+PETSc Version:           3.24.0
+SLEPc Version:           3.24.0
+Current Time:            Wed Sep  2 20:11:19 2026
+Executable Timestamp:    Wed Nov 26 18:13:58 2025
+
+Input File(s):
+  /home/lloydf/dic-prob-val/sims/test_plas.i
+
+Command Line Argument(s):
+  --n-threads=1
+
+Checkpoint:
+  Wall Time Interval:      Every 3600 s
+  User Checkpoint:         Disabled
+  # Checkpoints Kept:      2
+  Execute On:              TIMESTEP_END 
+
+Parallelism:
+  Num Processors:          1
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   6324
+  Elems:                   3056
+  Num Subdomains:          1
+
+Nonlinear System:
+  Num DOFs:                14282
+  Num Local DOFs:          14282
+  Variables:               { "disp_x" "disp_y" } "scalar_strain_zz" 
+  Finite Element Types:    "LAGRANGE" "LAGRANGE" 
+  Approximation Orders:    "SECOND" "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                42784
+  Num Local DOFs:          42784
+  Variables:               { "vonmises_stress" "strain_xx" "strain_yy" "strain_zz" "strain_xy" ... "stress_xx" 
+                             "stress_yy" "stress_zz" "stress_xy" "effective_plastic_strain_out" } 
+  Finite Element Types:    "MONOMIAL" 
+  Approximation Orders:    "CONSTANT" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             IterationAdaptiveDT
+  TimeIntegrator(s):       ImplicitEuler
+  Solver Mode:             NEWTON 
+  PETSc Preconditioner:    lu 
+  MOOSE Preconditioner:    SMP 

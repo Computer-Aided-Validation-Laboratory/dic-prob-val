@@ -1,15 +1,8 @@
-"""
-================================================================================
-License: MIT
-Copyright (C) 2024 The Computer Aided Validation Team
-================================================================================
-"""
 import argparse
 import time
 from pathlib import Path
 from pyvale.mooseherder import (MooseConfig,
                                 MooseRunner)
-from run_helpers import run_moose_and_tee
 
 USER_DIR = Path.home()
 
@@ -19,7 +12,7 @@ def main() -> None:
     parser.add_argument(
         "-i", "--input",
         type=str,
-        default="hole_notch_2d_elas.i",
+        default="platehole3d_elas.i",
         help="Input file name or path"
     )
     args = parser.parse_args()
@@ -43,6 +36,7 @@ def main() -> None:
         redirect_out=False
     )
 
+    from run_helpers import run_moose_and_tee
     moose_start_time = time.perf_counter()
     run_moose_and_tee(moose_runner, moose_path)
     moose_run_time = time.perf_counter() - moose_start_time
