@@ -52,3 +52,122 @@ Execution Information:
   Solver Mode:             NEWTON 
   PETSc Preconditioner:    lu 
   MOOSE Preconditioner:    SMP 
+
+Time Step 0, time = 0
+
+Postprocessor Values:
++----------------+----------------+-----------------------+
+| time           | disp_y_max     | plastic_strain_eq_max |
++----------------+----------------+-----------------------+
+|   0.000000e+00 |   0.000000e+00 |          0.000000e+00 |
++----------------+----------------+-----------------------+
++----------------+----------------+----------------+
+| time           | react_y_top    | stress_vm_max  |
++----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
++----------------+----------------+----------------+
+
+
+Time Step 1, time = 1, dt = 1
+ Skipping predictor this step
+ 0 Nonlinear |R| = [32m2.109091e-05[39m
+      0 Linear |R| = [32m2.109091e-05[39m
+      1 Linear |R| = [32m1.162555e-18[39m
+ 1 Nonlinear |R| = [32m1.256597e-05[39m
+      0 Linear |R| = [32m1.256597e-05[39m
+      1 Linear |R| = [32m3.850358e-18[39m
+
+Cannot take square root of a number less than or equal to zero in the calculation of C1 for the Rashid approximation for the rotation tensor. This zero or negative number may occur when elements become heavily distorted.
+To recover, the solution will fail and then be re-attempted with a reduced time step.
+
+  Nonlinear solve did not converge due to DIVERGED_FNORM_NAN iterations 1
+[31m Solve Did NOT Converge![39m
+Aborting as solve did not converge
+
+Solve failed, cutting timestep.
+
+Time Step 1, time = 0.5, dt = 0.5
+ Skipping predictor this step
+ 0 Nonlinear |R| = [32m1.102626e-05[39m
+      0 Linear |R| = [32m1.102626e-05[39m
+      1 Linear |R| = [32m2.026392e-19[39m
+ 1 Nonlinear |R| = [32m2.583626e-06[39m
+      0 Linear |R| = [32m2.583626e-06[39m
+      1 Linear |R| = [32m6.250019e-19[39m
+ 2 Nonlinear |R| = [32m2.332414e-06[39m
+      0 Linear |R| = [32m2.332414e-06[39m
+      1 Linear |R| = [32m4.763245e-19[39m
+ 3 Nonlinear |R| = [32m1.887948e-06[39m
+      0 Linear |R| = [32m1.887948e-06[39m
+      1 Linear |R| = [32m5.283881e-19[39m
+ 4 Nonlinear |R| = [32m1.400512e-06[39m
+      0 Linear |R| = [32m1.400512e-06[39m
+      1 Linear |R| = [32m4.005775e-19[39m
+ 5 Nonlinear |R| = [33m1.335482e-06[39m
+      0 Linear |R| = [32m1.335482e-06[39m
+      1 Linear |R| = [32m8.273762e-20[39m
+ 6 Nonlinear |R| = [32m1.059694e-06[39m
+      0 Linear |R| = [32m1.059694e-06[39m
+      1 Linear |R| = [32m4.878051e-19[39m
+ 7 Nonlinear |R| = [33m1.027419e-06[39m
+      0 Linear |R| = [32m1.027419e-06[39m
+      1 Linear |R| = [32m3.580980e-19[39m
+ 8 Nonlinear |R| = [33m1.022410e-06[39m
+      0 Linear |R| = [32m1.022410e-06[39m
+      1 Linear |R| = [32m3.212380e-20[39m
+ 9 Nonlinear |R| = [32m6.715489e-07[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 9
+[32m Solve Converged![39m
+Currently Executing
+  Finished Solving                                                                       [[33m 18.25 s[39m] [[33m  243 MB[39m]
+
+Outlier Variable Residual Norms:
+  disp_y: [31m6.135608e-07[39m
+
+Postprocessor Values:
++----------------+----------------+-----------------------+
+| time           | disp_y_max     | plastic_strain_eq_max |
++----------------+----------------+-----------------------+
+|   0.000000e+00 |   0.000000e+00 |          0.000000e+00 |
+|   5.000000e-01 |   1.324828e-02 |          1.902368e-02 |
++----------------+----------------+-----------------------+
++----------------+----------------+----------------+
+| time           | react_y_top    | stress_vm_max  |
++----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   5.000000e-01 |   1.158911e+03 |   3.028284e+02 |
++----------------+----------------+----------------+
+
+
+Time Step 2, time = 1, dt = 0.5
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.154276e-06[39m
+      0 Linear |R| = [32m1.154276e-06[39m
+      1 Linear |R| = [32m5.352585e-20[39m
+ 1 Nonlinear |R| = [33m1.104688e-06[39m
+      0 Linear |R| = [32m1.104688e-06[39m
+      1 Linear |R| = [32m2.659708e-20[39m
+ 2 Nonlinear |R| = [32m7.366234e-07[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+-----------------------+
+| time           | disp_y_max     | plastic_strain_eq_max |
++----------------+----------------+-----------------------+
+|   0.000000e+00 |   0.000000e+00 |          0.000000e+00 |
+|   5.000000e-01 |   1.324828e-02 |          1.902368e-02 |
+|   1.000000e+00 |   1.913781e-02 |          2.422184e-02 |
++----------------+----------------+-----------------------+
++----------------+----------------+----------------+
+| time           | react_y_top    | stress_vm_max  |
++----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
+|   5.000000e-01 |   1.158911e+03 |   3.028284e+02 |
+|   1.000000e+00 |  -5.364735e+02 |   3.090662e+02 |
++----------------+----------------+----------------+
+
+
+Time Step 3, time = 1.6, dt = 0.6
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.440880e-06[39m

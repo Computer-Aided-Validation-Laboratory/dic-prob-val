@@ -12,6 +12,7 @@
 *.blend
 *.csv
 *.json
+*.out
 
 # MOOSE / gmsh
 *-opt

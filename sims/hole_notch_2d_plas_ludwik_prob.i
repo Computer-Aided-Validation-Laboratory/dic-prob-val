@@ -26,6 +26,7 @@ c2_top = 0.0
         scaling = 1e-9
     []
     [scalar_strain_zz]
+        scaling = 1e-9
     []
 []
 
