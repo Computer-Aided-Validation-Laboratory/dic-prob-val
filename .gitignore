@@ -19,6 +19,9 @@
 *.msh
 
 # Directories
+out/
+notes/
+plans/
 .venv/
 .ruff_cache/
 .antigravitycli/
