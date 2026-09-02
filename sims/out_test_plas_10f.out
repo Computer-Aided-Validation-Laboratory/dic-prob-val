@@ -171,3 +171,18 @@ Postprocessor Values:
 Time Step 3, time = 1.6, dt = 0.6
   Applying predictor with scale factor = 1
  0 Nonlinear |R| = [32m1.440880e-06[39m
+      0 Linear |R| = [32m1.440880e-06[39m
+      1 Linear |R| = [32m9.004105e-20[39m
+ 1 Nonlinear |R| = [33m1.415061e-06[39m
+      0 Linear |R| = [32m1.415061e-06[39m
+      1 Linear |R| = [32m7.741057e-20[39m
+ 2 Nonlinear |R| = [32m1.169462e-06[39m
+      0 Linear |R| = [32m1.169462e-06[39m
+      1 Linear |R| = [32m1.138755e-19[39m
+ 3 Nonlinear |R| = [33m1.132948e-06[39m
+      0 Linear |R| = [32m1.132948e-06[39m
+      1 Linear |R| = [32m8.727856e-20[39m
+ 4 Nonlinear |R| = [32m8.740956e-07[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+[32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  8.36 s[39m] [[33m  243 MB[39m]

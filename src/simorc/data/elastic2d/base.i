@@ -5,8 +5,8 @@
 #-------------------------------------------------------------------------
 #_* MOOSEHERDER VARIABLES - START
 !include common_load_time.i
-!include common_plas_linear_props.i
-simName = test_plas
+!include common_elas_props.i
+simName = hole_notch_2d_elas_prob
 
 plate_width = 25.0
 c1_bot = 0.0
@@ -26,7 +26,6 @@ c2_top = 0.0
         scaling = 1e-9
     []
     [scalar_strain_zz]
-        scaling = 1e-9
     []
 []
 
@@ -61,7 +60,7 @@ c2_top = 0.0
 
         material_output_family = MONOMIAL
         material_output_order = CONSTANT
-        generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy plastic_strain_xx plastic_strain_yy plastic_strain_zz plastic_strain_xy stress_xx stress_yy stress_zz stress_xy'
+        generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy stress_xx stress_yy stress_zz stress_xy'
     []
 []
 
@@ -72,33 +71,8 @@ c2_top = 0.0
         poissons_ratio = ${PRatio}
     []
 
-    [radial_return_stress]
-        type = ADComputeMultipleInelasticStress
-        inelastic_models = 'isoplas'
-    []
-
-    [isoplas]
-        type = ADIsotropicPlasticityStressUpdate
-        yield_stress = ${Yield}
-        hardening_constant = ${HardMod}
-        relative_tolerance = 1e-9
-        absolute_tolerance = 1e-9
-    []
-[]
-
-[AuxVariables]
-    [effective_plastic_strain_out]
-        family = MONOMIAL
-        order = CONSTANT
-    []
-[]
-
-[AuxKernels]
-    [effective_plastic_strain_out]
-        type = ADMaterialRealAux
-        variable = effective_plastic_strain_out
-        property = effective_plastic_strain
-        execute_on = 'INITIAL TIMESTEP_END'
+    [stress]
+        type = ADComputeFiniteStrainElasticStress
     []
 []
 
@@ -142,11 +116,6 @@ c2_top = 0.0
     [stress_vm_max]
         type = ElementExtremeValue
         variable = vonmises_stress
-    []
-
-    [plastic_strain_eq_max]
-        type = ElementExtremeValue
-        variable = effective_plastic_strain_out
     []
 []
 

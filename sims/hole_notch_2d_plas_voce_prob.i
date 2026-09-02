@@ -43,15 +43,16 @@ c2_top = 0.0
 [Functions]
     [bc_bot_y_fn]
         type = ParsedFunction
-        expression = '(${c1_bot} * x + ${c2_bot} * (x^2 - (${plate_width}^2)/12)) * (t / ${endTime})'
+        expression = '(${c1_bot} * x + ${c2_bot} * (x*x - (${plate_width}*${plate_width})/12)) * (t / ${endTime})'
     []
     [bc_top_y_fn]
         type = ParsedFunction
-        expression = '(${topDispRate} * t) + (${c1_top} * x + ${c2_top} * (x^2 - (${plate_width}^2)/12)) * (t / ${endTime})'
+        expression = '(${topDispRate} * t) + (${c1_top} * x + ${c2_top} * (x*x - (${plate_width}*${plate_width})/12)) * (t / ${endTime})'
     []
     [voce_func]
-        type = ParsedFunction
-        expression = '${Yield} + ${VoceRInf} * (1 - exp(-${VoceB} * t))'
+        type = PiecewiseLinear
+        x = '0.000000 0.000500 0.001000 0.002000 0.005000 0.010000 0.020000 0.030000 0.050000 0.070000 0.100000 0.150000 0.200000 0.250000 0.300000 0.400000 0.500000'
+        y = '280.00 281.23 282.45 284.89 292.07 303.63 325.34 345.27 380.41 410.05 446.05 488.97 517.02 535.36 547.36 560.32 565.86'
     []
 []
 

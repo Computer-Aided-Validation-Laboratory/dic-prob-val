@@ -43,15 +43,16 @@ c2_top = 0.0
 [Functions]
     [bc_bot_y_fn]
         type = ParsedFunction
-        expression = '(${c1_bot} * x + ${c2_bot} * (x^2 - (${plate_width}^2)/12)) * (t / ${endTime})'
+        expression = '(${c1_bot} * x + ${c2_bot} * (x*x - (${plate_width}*${plate_width})/12)) * (t / ${endTime})'
     []
     [bc_top_y_fn]
         type = ParsedFunction
-        expression = '(${topDispRate} * t) + (${c1_top} * x + ${c2_top} * (x^2 - (${plate_width}^2)/12)) * (t / ${endTime})'
+        expression = '(${topDispRate} * t) + (${c1_top} * x + ${c2_top} * (x*x - (${plate_width}*${plate_width})/12)) * (t / ${endTime})'
     []
     [ludwik_func]
-        type = ParsedFunction
-        expression = '${Yield} + ${LudwikK} * (t^${LudwikN})'
+        type = PiecewiseLinear
+        x = '0.000000 0.000500 0.001000 0.002000 0.005000 0.010000 0.020000 0.030000 0.050000 0.070000 0.100000 0.150000 0.200000 0.250000 0.300000 0.400000 0.500000'
+        y = '280.00 286.59 289.98 295.13 306.23 319.75 340.25 356.84 384.41 407.76 438.25 481.83 519.86 554.22 585.92 643.56 695.64'
     []
 []
 
