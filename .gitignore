@@ -1,3 +1,30 @@
+#-------------------------------------------------------------------------------
+# Specific Ignores
+
+# Output files
+*.npy
+*.dat
+*.png
+*.svg
+*.mp4
+*.gif
+*.tiff
+*.blend
+*.csv
+*.json
+
+# MOOSE / gmsh
+*-opt
+*.e
+*.msh
+
+# Directories
+.venv/
+.ruff_cache/
+.antigravitycli/
+/.*/
+
+#-------------------------------------------------------------------------------
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
