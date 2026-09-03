@@ -140,7 +140,8 @@ class DistUniform:
             and self.lower >= self.upper
         ):
             raise ValueError(
-                f"Lower bound ({self.lower}) must be < upper bound ({self.upper})."
+                f"Lower bound ({self.lower}) must be < upper bound "
+                f"({self.upper})."
             )
 
     def has_epistemic(self) -> bool:
